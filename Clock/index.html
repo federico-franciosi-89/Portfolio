@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clock</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://unpkg.com/vue@3"></script>
+  </head>
+  <body>
+    <div class="container" id="clock">
+      <div class="innerContainer">
+        <h1 v-if="hour < 10">0</h1>
+        <h1>{{hour}}</h1>
+        <h1>:</h1>
+        <h1 v-if="minutes < 10">0</h1>
+        <h1>{{minutes}}</h1>
+        <h1>:</h1>
+        <h1 v-if="seconds < 10">0</h1>
+        <h1>{{seconds}}</h1>
+        <h1 v-if="hour > 12 ">PM</h1>
+        <h1 v-else>AM</h1>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
